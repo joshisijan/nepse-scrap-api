@@ -2,10 +2,10 @@
   "name": "nepse-api",
   "version": "1.0.0",
   "description": "newweb nepse scrap api",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "author": "sijan joshi",
   "license": "ISC",
