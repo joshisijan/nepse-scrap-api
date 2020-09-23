@@ -12,7 +12,7 @@ const marketStatusUrl = "https://newweb.nepalstock.com/api/nots/nepse-data/marke
 //get list of all companies
 router.get("/companies", async (req, res) => {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto(companiesUrl);
     const html = await page.content();
@@ -29,7 +29,7 @@ router.get("/companies", async (req, res) => {
 
 router.get("/status", async (req, res) => {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto(marketStatusUrl);
     const html = await page.content();
