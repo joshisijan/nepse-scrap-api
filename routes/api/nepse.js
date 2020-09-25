@@ -11,6 +11,8 @@ const marketStatusUrl =
   "https://newweb.nepalstock.com/api/nots/nepse-data/market-open";
 const nepseIndexUrl = "https://newweb.nepalstock.com/api/nots/nepse-index";
 const nepseTimeValueUrl = "https://newweb.nepalstock.com/api/nots/graph/index";
+const marketSummaryUrl = "https://newweb.nepalstock.com/api/nots/market-summary";
+const securityDetailUrl = "https://newweb.nepalstock.com/api/nots/security"
 
 // function to make router
 const makeRouter = (routeName, url) => {
@@ -42,5 +44,9 @@ makeRouter("/nepse-index", nepseIndexUrl);
 makeRouter("/nepse-chart/:id", nepseTimeValueUrl);
 //get list of all companies
 makeRouter("/companies", companiesUrl);
+//get market summary
+makeRouter("/market-summary", marketSummaryUrl);
+//get security detail
+makeRouter("/security/:id", securityDetailUrl);
 
 module.exports = router;
